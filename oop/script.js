@@ -38,8 +38,10 @@ const player2 = {
     }
 }
 console.clear();
+
 // classes - blueprint for an object
 class Player {
+    // this is the constructor - it get's called if we create a new Player object
     constructor(nameParam, colorParam) {
         this.playername = nameParam;
         this.color = colorParam;
@@ -47,6 +49,7 @@ class Player {
         this.cash = 1000;
     }
 
+    // we can only have functions / methods in the class, nothing else 
     move() {
         console.log('move');
         dice = Math.floor(1 + 6 * Math.random());
@@ -59,6 +62,7 @@ class Player {
     }
 }
 
+// this creates a new Player object
 const p1 = new Player('Bob', 'red');
 // const p2 = new Player('Alice', 'green');
 // p1.age = 34;
